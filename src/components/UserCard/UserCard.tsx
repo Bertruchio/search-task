@@ -1,6 +1,16 @@
 import "./style.css";
 
-export function UserCard(props) {
+interface UserCardProps {
+  id: number;
+  firstName: string;
+  lastName: string;
+  image: string;
+  address: {
+    city: string;
+  };
+}
+
+export function UserCard(props: UserCardProps) {
   return (
     <div className="userCard">
       <img className="userPic" src={props.image} />
